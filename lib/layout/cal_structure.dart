@@ -1,9 +1,9 @@
-import 'package:bmi_calculator/style/theme_color.dart';
-import 'package:bmi_calculator/ui/gender/gender_row.dart';
-import 'package:bmi_calculator/ui/height/height_row.dart';
-import 'package:bmi_calculator/ui/weight_age/weight_age_row.dart';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import '../ui/calculate_screen/gender/gender_row.dart';
+import '../ui/calculate_screen/height/height_row.dart';
+import '../ui/calculate_screen/weight_age/weight_age_row.dart';
+import '../style/theme_color.dart';
 class myCal extends StatefulWidget {
   @override
   State<myCal> createState() => _myCalState();

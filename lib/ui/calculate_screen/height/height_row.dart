@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../style/theme_color.dart';
+import '../../../style/theme_color.dart';
 
 class heightRow extends StatefulWidget {
   const heightRow({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../style/theme_color.dart';
+import '../../../style/theme_color.dart';
 class weight_ageRow extends StatefulWidget {
   const weight_ageRow({Key? key}) : super(key: key);
 

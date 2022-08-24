@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../style/theme_color.dart';
+import '../../../style/theme_color.dart';
 class genderRow extends StatefulWidget {
   const genderRow({Key? key}) : super(key: key);
 
