@@ -3,23 +3,22 @@ import 'package:bmi_calculator/ui/home_screen/homeScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'layout/cal_structure.dart';
-void main(){
+
+void main() {
   runApp(myApp());
 }
 
-class myApp extends StatelessWidget{
+class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-
-     debugShowCheckedModeBanner: false,
-     theme: myStyle.darkMood,
-     routes: {
-       "welcome":(context) => welcome(),
-       "calScreen":(context) => myCal(),
-     },
-     initialRoute: "welcome",
-   );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: myStyle.darkMood,
+      routes: {
+        "welcome": (context) => welcome(),
+        "calScreen": (context) => myCal(),
+      },
+      initialRoute: "welcome",
+    );
   }
-
 }

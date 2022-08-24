@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import '../../../style/theme_color.dart';
+
 class weight_ageRow extends StatefulWidget {
   const weight_ageRow({Key? key}) : super(key: key);
 
@@ -10,10 +12,11 @@ class weight_ageRow extends StatefulWidget {
 
 class _weight_ageRowState extends State<weight_ageRow> {
   @override
-  int age=15;
-  int weight=40;
+  int age = 15;
+  int weight = 40;
+
   Widget build(BuildContext context) {
-    Size size =MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return SizedBox(
         height: size.height / 4,
         child: Row(
@@ -26,53 +29,57 @@ class _weight_ageRowState extends State<weight_ageRow> {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:  [
-                    Text("WEIGHT",
+                  children: [
+                    Text(
+                      "WEIGHT",
                       style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w700,
-                          color: Colors.white70
-                      ),),
+                          color: Colors.white70),
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.baseline,
                       textBaseline: TextBaseline.alphabetic,
                       children: [
-                        Text("$weight",style: TextStyle(
-                            fontSize: 50,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white
-                        )),
-                        Text("KG",style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            color: myStyle.primaryColor
-                        ),)
+                        Text("$weight",
+                            style: TextStyle(
+                                fontSize: 50,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        Text(
+                          "KG",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              color: myStyle.primaryColor),
+                        )
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         FloatingActionButton(
-                          onPressed: (){
+                          onPressed: () {
                             weight--;
-                            setState((){});
+                            setState(() {});
                           },
-                          child: Text("-",
+                          child: Text(
+                            "-",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 35
-                            ),
+                                fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                           mini: true,
                           backgroundColor: Colors.white30,
                           splashColor: myStyle.primaryColor,
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(
+                          width: 10,
+                        ),
                         FloatingActionButton(
-                          onPressed: (){
+                          onPressed: () {
                             weight++;
-                            setState((){});
+                            setState(() {});
                           },
                           child: Icon(Icons.add),
                           mini: true,
@@ -86,7 +93,7 @@ class _weight_ageRowState extends State<weight_ageRow> {
               ),
             ),
             SizedBox(
-              width: size.width*0.05,
+              width: size.width * 0.05,
             ),
             Expanded(
               child: Container(
@@ -96,41 +103,43 @@ class _weight_ageRowState extends State<weight_ageRow> {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:  [
-                    Text("AGE",
+                  children: [
+                    Text(
+                      "AGE",
                       style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w700,
-                          color: Colors.white70
-                      ),),
-                    Text("$age",style: TextStyle(
-                        fontSize: 50,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white
-                    )),
+                          color: Colors.white70),
+                    ),
+                    Text("$age",
+                        style: TextStyle(
+                            fontSize: 50,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         FloatingActionButton(
-                          onPressed: (){
+                          onPressed: () {
                             age--;
-                            setState((){});
+                            setState(() {});
                           },
-                          child: Text("-",
+                          child: Text(
+                            "-",
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 35
-                            ),
+                                fontWeight: FontWeight.bold, fontSize: 35),
                           ),
                           mini: true,
                           backgroundColor: Colors.white30,
                           splashColor: myStyle.primaryColor,
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(
+                          width: 10,
+                        ),
                         FloatingActionButton(
-                          onPressed: (){
+                          onPressed: () {
                             age++;
-                            setState((){});
+                            setState(() {});
                           },
                           child: Icon(Icons.add),
                           mini: true,
