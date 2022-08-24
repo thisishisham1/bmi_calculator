@@ -47,7 +47,13 @@ class _myCalState extends State<myCal> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text("CALCULATE")
+              Text("CALCULATE",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                letterSpacing: 1
+              ),)
             ],
           ),
         ),

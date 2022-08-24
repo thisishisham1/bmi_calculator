@@ -58,7 +58,7 @@ class _heightRowState extends State<heightRow> {
                     setState((){});
                   },
                     thumbColor: myStyle.primaryColor,
-                    activeColor: Colors.white54,
+                    activeColor: Color(0xe2fa3e60),
                     max: 300,
                     min: 50,
                     label: "height",

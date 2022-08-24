@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import '../../style/theme_color.dart';
 class genderRow extends StatefulWidget {
   const genderRow({Key? key}) : super(key: key);
 
@@ -10,6 +10,7 @@ class genderRow extends StatefulWidget {
 
 class _genderRowState extends State<genderRow> {
   @override
+  bool isMale=true;
   Widget build(BuildContext context) {
     Size size=MediaQuery.of(context).size;
     return SizedBox(
@@ -20,10 +21,12 @@ class _genderRowState extends State<genderRow> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.black38,
+                  color:isMale? Color(0xe2fa3e60) :Colors.black38,
                 ),
                 child: InkWell(
                   onTap: () {
+                    isMale=true;
+                    setState((){});
                     ///function MALE
                   },
                   child: Column(
@@ -50,10 +53,12 @@ class _genderRowState extends State<genderRow> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.black38,
+                  color:!isMale? Color(0xe2fa3e60): Colors.black38,
                 ),
                 child: InkWell(
                   onTap: () {
+                    isMale=false;
+                    setState((){});
                     ///function FEMALE
                   },
                   child: Column(
