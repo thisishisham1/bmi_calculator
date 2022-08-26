@@ -1,18 +1,16 @@
 import 'package:bmi_calculator/style/theme_color.dart';
+import 'package:bmi_calculator/ui/calculate_screen/myCal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class welcome extends StatefulWidget {
-  const welcome({Key? key}) : super(key: key);
-
   @override
   State<welcome> createState() => _welcomeState();
 }
 
 class _welcomeState extends State<welcome> {
-  String name = '';
   bool checkname = false;
-
+  TextEditingController nameConttroler = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -33,6 +31,7 @@ class _welcomeState extends State<welcome> {
                   width: size.height * 1,
                   height: size.height * 0.1,
                   child: TextFormField(
+                    controller: nameConttroler,
                     validator: (text) {
                       if (text!.isEmpty) {
                         checkname = false;
@@ -44,14 +43,16 @@ class _welcomeState extends State<welcome> {
                     autovalidateMode: AutovalidateMode.always,
                     decoration: InputDecoration(
                       hintText: "your name",
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.w400),
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color(0x6441436a))),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color(0x6441436a))),
+                      border: const OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(color: Color(0x6441436a))),
+                      focusedBorder: const OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(color: Color(0x6441436a))),
                       filled: true,
                       fillColor: Colors.black38,
                       suffixIcon: Container(
@@ -62,36 +63,33 @@ class _welcomeState extends State<welcome> {
                               onPressed: () {
                                 onpreesed();
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.arrow_forward,
                                 color: Colors.white,
                                 size: 20,
                               ))),
                     ),
-                    onChanged: (text) {
-                      name = text;
-                      print(name);
-                    },
-                    style: TextStyle(
+                    onChanged: (String text) {},
+                    style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
                         color: Colors.white70),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               checkname == true
                   ? Container(
                       height: 300,
                       width: 300,
-                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
                           ),
                           Text(
@@ -114,7 +112,8 @@ class _welcomeState extends State<welcome> {
 
   void onpreesed() {
     if (checkname == true) {
-      Navigator.pushNamed(context, "calScreen");
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => myCal(nameConttroler.text)));
     }
   }
 }
